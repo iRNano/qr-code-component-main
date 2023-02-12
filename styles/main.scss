@@ -1,0 +1,64 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+@import './mixins';
+
+html, body{
+    padding:0;
+    margin: 0;
+}
+main{
+    background-color: hsl(212, 45%, 89%);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    font-family: 'Outfit', serif;
+    .qr-card{
+        background-color: hsl(0, 0%, 100%);
+        min-height: 69.8vh;
+        max-width: 76.8vw;
+        padding: 1em;
+        border-radius: 20px;
+
+        @include sm{
+            min-height: 58vh;
+            max-width:36vh;
+        
+        }
+        &-img{
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        &-description{
+            text-align: center;
+            padding: 0 1em;
+            h2{
+                font-weight: 700;
+                font-size: 22px;
+                color: hsl(218, 44%, 22%);
+                margin: 20px 0 0 0;
+    letter-spacing: .124px;
+            }
+
+            p{
+                color: hsl(220, 15%, 55%);
+                margin: 15px 0px 0px;
+    /* line-height: 19.5px; */
+    /* letter-spacing: .1px; */
+    word-spacing: 1px;
+    font-size: 15px;
+            }
+        }
+    }
+}
